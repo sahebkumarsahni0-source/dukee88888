@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Wishlist</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <section class="cart-page">
+
+        <h1>My Wishlist</h1>
+
+        <div id="wishlistItems" class="cart-box"></div>
+
+    </section>
+
+    <script>
+
+        let items =
+            JSON.parse(
+                localStorage.getItem("wishlist")
+            ) || [];
+
+        let box =
+            document.getElementById(
+                "wishlistItems"
+            );
+
+        items.forEach(item => {
+
+            box.innerHTML += `
+<div class="cart-item">
+<span>${item}</span>
+</div>
+`;
+
+        });
+
+    </script>
+
+</body>
+
+</html>

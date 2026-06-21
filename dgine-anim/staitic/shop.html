@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            DUKE CART
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Login</a>
+            <a href="cart.html">Cart</a>
+            <button id="themeBtn">
+                🌙
+            </button>
+            <div class="menu-btn">
+                ☰
+            </div>
+        </nav>
+
+    </header>
+
+    <input type="text" id="searchInput" placeholder="Search Product..." class="search-box">
+
+    <section class="products">
+
+        <h2>Our Products</h2>
+
+        <div class="product-grid" id="productGrid">
+
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500">
+                <h3>Premium T-Shirt</h3>
+                <p>₹999</p>
+                <button class="wish-btn" onclick="addWishlist('Premium T-Shirt')">
+                    ❤️ Wishlist
+                </button>
+                <button onclick="addToCart('Premium T-Shirt',999)">
+                    Add To Cart
+                </button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=500">
+                <h3>Hoodie</h3>
+                <p>₹1499</p>
+                <button class="wish-btn" onclick="addWishlist('Premium T-Shirt')">
+                    ❤️ Wishlist
+                </button>
+                <button onclick="addToCart('Premium T-Shirt',999)">
+                    Add To Cart
+                </button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500">
+                <h3>Jacket</h3>
+                <p>₹2499</p>
+                <button class="wish-btn" onclick="addWishlist('Premium T-Shirt')">
+                    ❤️ Wishlist
+                </button>
+                <button onclick="addToCart('Premium T-Shirt',999)">
+                    Add To Cart
+                </button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500">
+                <h3>Shoes</h3>
+                <p>₹1999</p>
+                <button class="wish-btn" onclick="addWishlist('Premium T-Shirt')">
+                    ❤️ Wishlist
+                </button>
+                <button onclick="addToCart('Premium T-Shirt',999)">
+                    Add To Cart
+                </button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=500">
+                <h3>Fashion Shirt</h3>
+                <p>₹1199</p>
+                <button class="wish-btn" onclick="addWishlist('Premium T-Shirt')">
+                    ❤️ Wishlist
+                </button>
+                <button onclick="addToCart('Premium T-Shirt',999)">
+                    Add To Cart
+                </button>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=500">
+                <h3>Fashion Shirt</h3>
+                <p>₹1199</p>
+                <button class="wish-btn" onclick="addWishlist('Premium T-Shirt')">
+                    ❤️ Wishlist
+                </button>
+                <button onclick="addToCart('Premium T-Shirt',999)">
+                    Add To Cart
+                </button>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=500">
+                <h3>Fashion Shirt</h3>
+                <p>₹1199</p>
+                <button class="wish-btn" onclick="addWishlist('Premium T-Shirt')">
+                    ❤️ Wishlist
+                </button>
+                <button onclick="addToCart('Premium T-Shirt',999)">
+                    Add To Cart
+                </button>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=500">
+                <h3>Fashion Shirt</h3>
+                <p>₹1199</p>
+                <button class="wish-btn" onclick="addWishlist('Premium T-Shirt')">
+                    ❤️ Wishlist
+                </button>
+                <button onclick="addToCart('Premium T-Shirt',999)">
+                    Add To Cart
+                </button>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=500">
+                <h3>Fashion Shirt</h3>
+                <p>₹1199</p>
+                <button class="wish-btn" onclick="addWishlist('Premium T-Shirt')">
+                    ❤️ Wishlist
+                </button>
+                <button onclick="addToCart('Premium T-Shirt',999)">
+                    Add To Cart
+                </button>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=500">
+                <h3>Fashion Shirt</h3>
+                <p>₹1199</p>
+                <button class="wish-btn" onclick="addWishlist('Premium T-Shirt')">
+                    ❤️ Wishlist
+                </button>
+                <button onclick="addToCart('Premium T-Shirt',999)">
+                    Add To Cart
+                </button>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=500">
+                <h3>Fashion Shirt</h3>
+                <p>₹1199</p>
+                <button class="wish-btn" onclick="addWishlist('Premium T-Shirt')">
+                    ❤️ Wishlist
+                </button>
+                <button onclick="addToCart('Premium T-Shirt',999)">
+                    Add To Cart
+                </button>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=500">
+                <h3>Fashion Shirt</h3>
+                <p>₹1199</p>
+                <button class="wish-btn" onclick="addWishlist('Premium T-Shirt')">
+                    ❤️ Wishlist
+                </button>
+                <button onclick="addToCart('Premium T-Shirt',999)">
+                    Add To Cart
+                </button>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=500">
+                <h3>Fashion Shirt</h3>
+                <p>₹1199</p>
+                <button class="wish-btn" onclick="addWishlist('Premium T-Shirt')">
+                    ❤️ Wishlist
+                </button>
+                <button onclick="addToCart('Premium T-Shirt',999)">
+                    Add To Cart
+                </button>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=500">
+                <h3>Fashion Shirt</h3>
+                <p>₹1199</p>
+                <button class="wish-btn" onclick="addWishlist('Premium T-Shirt')">
+                    ❤️ Wishlist
+                </button>
+                <button onclick="addToCart('Premium T-Shirt',999)">
+                    Add To Cart
+                </button>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=500">
+                <h3>Fashion Shirt</h3>
+                <p>₹1199</p>
+                <button class="wish-btn" onclick="addWishlist('Premium T-Shirt')">
+                    ❤️ Wishlist
+                </button>
+                <button onclick="addToCart('Premium T-Shirt',999)">
+                    Add To Cart
+                </button>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=500">
+                <h3>Fashion Shirt</h3>
+                <p>₹1199</p>
+                <button class="wish-btn" onclick="addWishlist('Premium T-Shirt')">
+                    ❤️ Wishlist
+                </button>
+                <button onclick="addToCart('Premium T-Shirt',999)">
+                    Add To Cart
+                </button>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=500">
+                <h3>Fashion Shirt</h3>
+                <p>₹1199</p>
+                <button class="wish-btn" onclick="addWishlist('Premium T-Shirt')">
+                    ❤️ Wishlist
+                </button>
+                <button onclick="addToCart('Premium T-Shirt',999)">
+                    Add To Cart
+                </button>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=500">
+                <h3>Fashion Shirt</h3>
+                <p>₹1199</p>
+                <button class="wish-btn" onclick="addWishlist('Premium T-Shirt')">
+                    ❤️ Wishlist
+                </button>
+                <button onclick="addToCart('Premium T-Shirt',999)">
+                    Add To Cart
+                </button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=500">
+                <h3>Women Dress</h3>
+                <p>₹1799</p>
+                <button class="wish-btn" onclick="addWishlist('Premium T-Shirt')">
+                    ❤️ Wishlist
+                </button>
+                <button onclick="addToCart('Premium T-Shirt',999)">
+                    Add To Cart
+                </button>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=500">
+                    <h3>Women Dress</h3>
+                    <p>₹1799</p>
+                    <button class="wish-btn" onclick="addWishlist('Premium T-Shirt')">
+                        ❤️ Wishlist
+                    </button>
+                    <button onclick="addToCart('Premium T-Shirt',999)">
+                        Add To Cart
+                    </button>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=500">
+                    <h3>Women Dress</h3>
+                    <p>₹1799</p>
+                    <button class="wish-btn" onclick="addWishlist('Premium T-Shirt')">
+                        ❤️ Wishlist
+                    </button>
+                    <button onclick="addToCart('Premium T-Shirt',999)">
+                        Add To Cart
+                    </button>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=500">
+                    <h3>Women Dress</h3>
+                    <p>₹1799</p>
+                    <button class="wish-btn" onclick="addWishlist('Premium T-Shirt')">
+                        ❤️ Wishlist
+                    </button>
+                    <button onclick="addToCart('Premium T-Shirt',999)">
+                        Add To Cart
+                    </button>
+                </div>
+
+            </div>
+
+    </section>
+    <script>
+
+        let products =
+            JSON.parse(
+                localStorage.getItem("products")
+            ) || [];
+
+        let grid =
+            document.getElementById(
+                "productGrid"
+            );
+
+        products.forEach(product => {
+
+            grid.innerHTML += `
+
+<div class="product-card">
+
+<img src="${product.image}">
+
+<h3>${product.name}</h3>
+
+<p>₹${product.price}</p>
+
+<button onclick="
+addToCart(
+'${product.name}',
+${product.price}
+)">
+Add To Cart
+</button>
+
+</div>
+
+`;
+
+        });
+
+    </script>
+    <script src="./css/script.js"></script>
+
+</body>
+
+</html>

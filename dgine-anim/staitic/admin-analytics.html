@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Analytics Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .dashboard {
+            padding: 100px 8%;
+        }
+
+        .analytics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .analytics-card {
+            background: #111827;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(0, 229, 255, .15);
+            transition: .4s;
+        }
+
+        .analytics-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .analytics-card h2 {
+            font-size: 40px;
+            color: #00e5ff;
+            margin-bottom: 10px;
+        }
+
+        .chart-box {
+            background: #111827;
+            padding: 30px;
+            border-radius: 20px;
+            margin-top: 40px;
+        }
+
+        .bar {
+            height: 30px;
+            margin: 15px 0;
+            background: #334155;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .fill {
+            height: 100%;
+            background: #00e5ff;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            DUKE CART ADMIN
+        </div>
+
+        <nav>
+            <a href="admin.html">Dashboard</a>
+            <a href="admin-products.html">Products</a>
+            <a href="orders.html">Orders</a>
+        </nav>
+
+    </header>
+
+    <section class="dashboard">
+
+        <h1>Analytics Dashboard</h1>
+
+        <div class="analytics-grid">
+
+            <div class="analytics-card">
+                <h2 id="users">0</h2>
+                <p>Total Users</p>
+            </div>
+
+            <div class="analytics-card">
+                <h2 id="totalUsers">0</h2>
+                <p>Total Users</p>
+            </div>
+
+            <div class="analytics-card">
+                <h2 id="totalProducts">0</h2>
+                <p>Total Products</p>
+            </div>
+
+            <div class="analytics-card">
+                <h2 id="totalOrders">0</h2>
+                <p>Total Orders</p>
+            </div>
+
+            <div class="analytics-card">
+                <h2 id="totalRevenue">₹0</h2>
+                <p>Total Revenue</p>
+            </div>
+
+        </div>
+
+        <div class="chart-box">
+
+            <h2>Monthly Sales</h2>
+
+            <p>January</p>
+            <div class="bar">
+                <div class="fill" style="width:80%"></div>
+            </div>
+
+            <p>February</p>
+            <div class="bar">
+                <div class="fill" style="width:60%"></div>
+            </div>
+
+            <p>March</p>
+            <div class="bar">
+                <div class="fill" style="width:95%"></div>
+            </div>
+
+            <p>April</p>
+            <div class="bar">
+                <div class="fill" style="width:75%"></div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <script>
+
+        function animate(id, target) {
+
+            let count = 0;
+
+            let element =
+                document.getElementById(id);
+
+            let timer = setInterval(() => {
+
+                count += Math.ceil(target / 100);
+
+                if (count >= target) {
+
+                    count = target;
+                    clearInterval(timer);
+
+                }
+
+                element.innerHTML = count;
+
+            }, 20);
+
+        }
+
+        animate("users", 1200);
+        animate("orders", 450);
+        animate("sales", 980);
+        animate("revenue", 540000);
+
+
+
+        import { db } from "./firebase.js";
+
+        import {
+            collection,
+            getDocs
+        }
+            from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+        async function loadAnalytics() {
+
+            /* Products */
+
+            const productsSnapshot =
+                await getDocs(
+                    collection(db, "products")
+                );
+
+            document.getElementById(
+                "totalProducts"
+            ).innerHTML =
+                productsSnapshot.size;
+
+            /* Orders */
+
+            const ordersSnapshot =
+                await getDocs(
+                    collection(db, "orders")
+                );
+
+            document.getElementById(
+                "totalOrders"
+            ).innerHTML =
+                ordersSnapshot.size;
+
+            /* Revenue */
+
+            let revenue = 0;
+
+            ordersSnapshot.forEach(doc => {
+
+                const order = doc.data();
+
+                revenue +=
+                    order.total || 0;
+
+            });
+
+            document.getElementById(
+                "totalRevenue"
+            ).innerHTML =
+                "₹" + revenue;
+
+            /* Users */
+
+            const usersSnapshot =
+                await getDocs(
+                    collection(db, "users")
+                );
+
+            document.getElementById(
+                "totalUsers"
+            ).innerHTML =
+                usersSnapshot.size;
+
+        }
+
+        loadAnalytics();
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+{
+"name":"Duke Cart",
+"short_name":"DukeCart",
+"start_url":"index.html",
+"display":"standalone",
+"background_color":"#0b1120",
+"theme_color":"#00e5ff",
+"icons":[
+{
+"src":"images/logo.png",
+"sizes":"192x192",
+"type":"image/png"
+}
+]
+}
